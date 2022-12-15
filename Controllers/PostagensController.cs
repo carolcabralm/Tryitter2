@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Tryitter.Controllers
 {
-  [Authorize(AuthenticationSchemes = "Bearer")]
+  // [Authorize(AuthenticationSchemes = "Bearer")]
   [ApiController]
   [Route("[controller]")]
   public class PostagensController : ControllerBase

@@ -24,17 +24,9 @@ namespace Tryitter.Controllers
       _configuration = configuration;
     }
 
-    [HttpGet]
-    public ActionResult<string> Get()
-    {
-      return "CadastroController :: Acessado em : "
-        + DateTime.Now.ToLongDateString();
-    }
-
     [HttpPost("register")]
     public async Task<ActionResult> RegisterUser([FromBody] Cadastro model)
     {
-      // opcional
       if (!ModelState.IsValid)
       {
         return BadRequest(ModelState.Values.SelectMany(e => e.Errors));
